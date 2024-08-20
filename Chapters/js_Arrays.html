@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<script>
+    let myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+
+    console.log(myArray);
+    
+// Accessing aray length and elements
+    console.log('myArray.length', + myArray.length);
+    let myArrayCopy = myArray;
+    myArrayCopy.length = 5;
+    console.log(myArrayCopy);
+    myArrayCopy.length = 15;
+    // console.log(myArrayCopy);
+    console.log(myArray); // Note the effect of the shallow copy...
+    console.log('-'.repeat(45));
+// The spread operator
+    console.log('The spread operator (...array)')
+    let arrayA = ['a', 'b', 'c'];
+    let arrayB = ['d', 'e', 'f'];
+    console.log(`arrayA = [${arrayA}], arrayB = [${arrayB}]`); 
+    let newArray1 = [arrayA, arrayB];
+    console.log('newArray1 = [arrayA, arrayB] -> ');
+    console.log(`    newArray1.length = ${newArray1.length}` +
+                `,  newArray1 = [[${arrayA}], [${arrayB}]]`);
+    let newArray2 = [...arrayA, ...arrayB];
+    console.log('newArray2 = [...arrayA, ...arrayB] -> ');
+    console.log(`    newArray2.length = ${newArray2.length}` +
+                `,  newArray2 = [${newArray2}]`);
+    
+    console.log('-'.repeat(45));
+    myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+    console.log(myArray);
+    console.log(
+                `myArray[0]: ${myArray[0]}, ` +
+                `myArray[5]: ${myArray[5]}, ` +
+                `myArray[14]: ${myArray[14]}, ` +
+                `myArray[15]: ${myArray[15]}`
+                );
+    console.log('='.repeat(45));
+    
+// .idexOf(), .includes()
+    console.log(`myArray.indexOf(5) ${myArray.indexOf(5)}`);
+    console.log(`myArray.includes(5) ${myArray.includes(5)}`);
+    console.log(`myArray.includes(5, 8) ${myArray.includes(5, 8)}: Searches 5 from position 8...`);
+    console.log(`myArray.includes(15) ${myArray.includes(15)}`);
+    console.log('='.repeat(45));
+    
+// .slice(), .splice()
+    console.log('.slice(from, toNotIncluding)'); 
+    console.log(`eg. myArray.slice(4, 8) -> ${myArray.slice(4, 8)}`);
+    console.log(`myArray remains unchanged: ${myArray}`);
+
+    console.log('-'.repeat(45));
+    console.log('.splice(from, noOfElementsToRemove, Replacement)');
+    console.log(`eg 1. myArray.splice(4, 3) -> ${myArray.splice(4, 3)}`);
+    console.log(`myArray changed: ${myArray} - Nothing was added`);
+    myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+    console.log(`eg 2. myArray.splice(4, 3, ['a', 'b']) -> ${myArray.splice(4, 3, ['a', 'b'])}`);
+    console.log(`myArray changed: ${myArray}`);
+    console.log('='.repeat(45));
+
+// Changing elements
+    myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+    myArray[2] = 'New Element';
+    console.log(`myArray[2] = 'New Element'; -> ${myArray}`);  
+    myArray[2] = 2;  // Reverting the change
+
+// Removing Elements
+    console.log('Using delete <element>')
+    delete myArray[2];
+    console.log('delete myArray[2]};');
+    console.log(myArray + ' Note that the position is still there containing an empty value');  
+    myArray[2] = 2;  // Just reverting the change
+    console.log('-'.repeat(45));
+    
+// pop and push
+    console.log('.pop()');
+    console.log('myArray.pop() = ' +
+                myArray.pop() );
+    console.log('myArray = ' +
+                myArray);
+    console.log('-'.repeat(45));
+
+    console.log('.push(newElement)');
+    console.log("myArray.push('NewElement') -> ");
+    myArray.push('NewElement');
+    console.log('myArray = ' + myArray);
+    myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];  // Just reverting the change
+    
+// shift and unshift
+    console.log('.shift()');
+    console.log('myArray.shift() = ' +
+                myArray.shift() );
+    console.log('myArray = ' +
+                myArray);
+    console.log('-'.repeat(45));
+
+    console.log('.unshift(newElement)');
+    console.log("myArray.unshift('NewElement') -> ");
+    myArray.unshift('NewElement');
+    console.log('myArray = ' + myArray);
+    myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];  // Just reverting the change
+    
+
+
+// 
+    
+    
+</script>

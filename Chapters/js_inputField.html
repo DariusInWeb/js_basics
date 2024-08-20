@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Field</title>
+</head>
+<body>
+    <form>
+        <label for='field1'>Enter some value:</label>
+        <input type='text' onchange='convert()' id='field1' placeholder='some value' width=10><br>
+        <label for='field2'>Enter some value:</label>
+        <input type='text' onchange='convert()' id='field2' placeholder='some value' width=10>
+    </form>
+    <p id='result1'></p>
+    <p id='result2'></p>
+    <p id='result3'></p>
+</body>
+<script>
+    convert = ()=>{
+        resultText = document.querySelector('#field1').value
+                        + document.querySelector('#field2').value;
+        
+        resultNumber = Number(document.querySelector('#field1').value)
+                        + Number(document.querySelector('#field2').value);
+        
+        console.log('TEXT: ', resultText, '    NUMBER: ', resultNumber);
+        
+        document.querySelector('#result1').innerText = 'TEXT: '
+                                            + resultText
+                                            + '    NUMBER: '
+                                            + resultNumber;
+        document.querySelector('#result2').innerText = ''.concat('',
+                                            'via .concat ',
+                                            'TEXT: ',
+                                            resultText,
+                                            '    NUMBER: ',
+                                            resultNumber);
+        document.querySelector('#result3').innerHTML = '<h3>innerHTML<br>TEXT: '
+                                            + resultText
+                                            + '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNUMBER: '
+                                            + resultNumber
+                                            + '</h3>';
+        }
+</script>
+</html>

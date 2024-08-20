@@ -1,0 +1,86 @@
+<h1>String methods</h1>
+<p>Javascript strings are primitive and immutable: All string.methods produce a new string without altering the original string.
+</p>
+<script>
+let myString= '    This is a String.   ';
+let index = 12, start = 5; end = 13, string2 = ' As well as this one.';
+let finalLen = 45, paddChar = '@', count = 5;
+let initialStr = 'This', replacement = 'That';
+let division = ' ';
+descriptions = [
+    'myString',
+    'myString.length',
+    `myString[${index}]`,
+    `myString.charAt(${index})`,
+    `myString.charCodeAt(${index})`,
+    `myString.at(${index})`,
+
+    `myString.slice(${start}, ${end})`,
+    `myString.substring(${start}, ${end})`,
+    `myString.substr(${start}, ${end})`,
+    
+    'myString.toUpperCase()',
+    'myString.toLowerCase()',
+
+    `myString.concat(' ', '${string2}')`,
+
+    'myString.trim()',
+    'myString.trimStart()',
+    'myString.trimEnd()',
+
+    `myString.padStart(${finalLen}, ${paddChar})`,
+    `myString.padEnd(${finalLen}, ${paddChar})`,
+
+    `myString.repeat(${count})`,
+
+    `myString.replace(${initialStr}, ${replacement})`,
+    'myString.replace("is", "is no more")',
+    'myString.replaceAll("is", "is no more")',
+    'myString.replace(/\sis/g, " is no more")',
+    'myString.replaceAll(/\sis/g, " is no more")',
+    
+    `myString.split("${division}")`,
+    'myString'
+    ]
+    
+items = [
+    myString,
+    myString.length,
+    myString[index],
+    myString.charAt(index),
+    myString.charCodeAt(index),
+    myString.at(index),
+
+    myString.slice(start, end),
+    myString.substring(start, end),
+    myString.substr(start, end),
+    
+    myString.toUpperCase(),
+    myString.toLowerCase(),
+
+    myString.concat(' ', string2),
+
+    myString.trim(),
+    myString.trimStart(),
+    myString.trimEnd(),
+
+    myString.padStart(finalLen, paddChar),
+    myString.padEnd(finalLen, paddChar),
+
+    myString.repeat(count),
+
+    myString.replace(initialStr, replacement),
+    myString.replace('is', 'is no more'),
+    myString.replaceAll('is', 'is no more'),
+    myString.replace(/\sis/g, ' is no more'),
+    myString.replaceAll(/\sis/g, ' is no more'),
+
+    myString.split(division),
+    myString
+    ]
+    
+    
+for (let i=0; i<items.length; i++){
+    console.log(descriptions[i].padEnd(45), ': ', items[i]);
+}
+</script>

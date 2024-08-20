@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<title>Objects</title>
+
+<script>
+    <!-- 1. Literal -->
+    console.log('Create object using literal definition.');
+    object1 = {
+        prop1: 'object 1, property 1',
+        prop2: 'object 1, property 2',
+        meth: ()=>{console.log('This is a method of object 1')}
+    }
+    
+    console.log(object1.prop1, object1.prop2);
+    object1.meth();
+    horline = '-'.repeat(45);
+
+    <!-- 2. new Object -->
+    console.log('Create object using newObject().');
+    object2 = new Object();
+    object2.prop1 = 'object 2 - property 1';
+    object2.prop2 = 'object 2 - property 2';
+    object2.meth = ()=>{console.log('This is a method of object 2')}
+    
+    console.log(object2.prop1, object2.prop2);
+    object2.meth();
+    console.log(horline);
+    
+    <!-- 3. Constructor function -->
+    console.log('Create object using function objName().');
+    function Obj(nm, pr1, pr2) {
+        this.prop1 = pr1;
+        this.prop2 = pr2;
+        this.meth = ()=>{console.log(`This is a method of object ${nm}`)};
+    }
+    object3 = new Obj(3, 'property 31', 'property32');
+    object4 = new Obj(4, 'property 41', 'property42');
+    
+    console.log(object3.prop1, object3.prop2);
+    object3.meth();
+    console.log(object4.prop1, object4.prop2);
+    object4.meth();
+    console.log(horline);
+    
+    <!-- 4. Class -->
+    console.log('Create object using class and constructor function');
+    class ClassObject {
+        constructor(nm, prop1, prop2) {
+            this.name = nm;
+            this.property1 = prop1;
+            this.property2 = prop2;
+        }
+        meth() {
+            console.log(`This is a method of object ${this.name}`);
+        }
+    }
+    object5 = new Obj(5, 'property 51', 'property52');        
+    object6 = new Obj(6, 'property 61', 'property62');        
+
+    console.log(object5.prop1, object5.prop2);
+    object5.meth();
+    console.log(object6.prop1, object6.prop2);
+    object6.meth();
+    
+    console.log('='.repeat(45));
+
+      
+</script>

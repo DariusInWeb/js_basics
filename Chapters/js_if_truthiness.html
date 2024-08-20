@@ -1,0 +1,58 @@
+<!--Note that this is an incomplete HTML file!!!! -->
+
+<title>If and Truthiness</title>
+
+<script>
+console.log('I. Truthiness of special values');
+valuesToCheck = [1, 0, -1, '', 'non empty string', NaN, undefined, null];
+typeof(valuesToCheck);
+// for 1st case
+//for(let index=0; index<valuesToCheck.length; index++) {
+    //if (valuesToCheck[index]) {    
+        //console.log(valuesToCheck[index] + ' is true');
+    //} else {
+        //console.log(valuesToCheck[index] + ' is false');
+    //}
+//}
+
+// for 2nd case
+//for(index in valuesToCheck) {
+    //if (valuesToCheck[index]) {    
+        //console.log(valuesToCheck[index] + ' is true');
+    //} else {
+        //console.log(valuesToCheck[index] + ' is false');
+    //}
+//}
+
+//for 3rd case (best)
+for(value of valuesToCheck) {
+    if (value) {    
+        console.log(value + ' is true');
+    } else {
+        console.log(value + ' is false');
+    }
+}
+console.log('='.repeat(45));
+
+console.log('II. Comparison cases');
+console.log("'1' == 1 is", '1' == 1 );
+console.log("'1' === 1 is", '1' === 1);
+console.log("'' == 0 is", '' == 0);
+console.log("'' === 0 is", '' === 0);
+console.log('='.repeat(45));
+
+console.log('III. Tricky points using operators');
+console.log('Attention at the order of operators');
+console.log('Study the folllowing code and the results');
+console.log("'1' == 1 is " + '1' == 1 );
+console.log("'1' === 1 is " + '1' === 1);
+
+console.log("'1' == 1 is " + true);
+console.log("'1' === 1 is " + false);
+
+console.log("'1' == 1 is " + ('1' == 1) );
+console.log("'1' === 1 is " + ('1' === 1) );
+console.log('='.repeat(45));
+
+
+</script>
