@@ -4,44 +4,8 @@
     
 <script>
 'use strict';
-// I. Intro to Functions
-// Compare this ...
-console.log('first');
-console.log('second');
-console.log('third');
-console.log('fourth');
-console.log('fifth');
-console.log('sixth');
 
-// with that... (case code reuse)
-console.log('-'.repeat(45));
-function demo1 (msg) {
-    msg = msg.toUpperCase();
-    console.log(msg);
-}
-
-demo1('first');
-demo1('second');
-demo1('third');
-demo1('fourth');
-demo1('fifth');
-demo1('sixth');
-
-// and that... (case code simplification and readability)
-console.log('-'.repeat(45));
-function demo2 (lst) {
-    for (let item of lst) {
-        item = item.toUpperCase();
-        console.log(item);
-    }
-}
-
-let my_list = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth'];
-demo2(my_list);
-
-
-
-// II. Demonstration of Functions and scope.
+// I. Demonstration of Functions and scope.
 console.log('-'.repeat(45));
 
 function determineCase(a, b, c) {
